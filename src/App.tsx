@@ -3,8 +3,11 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { DevTools } from 'jotai-devtools'
 import { Counter } from '@/components/Counter.tsx'
 import { Link, Outlet } from 'react-router-dom'
+import { queryCache } from '@/plugins/tanstack-query.ts'
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient({
+  queryCache
+})
 
 function App() {
   return (
