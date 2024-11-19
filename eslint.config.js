@@ -5,9 +5,13 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 import react from 'eslint-plugin-react'
 import reactCompiler from 'eslint-plugin-react-compiler'
+import unocss from '@unocss/eslint-config/flat'
 
 export default tseslint.config(
-  { ignores: ['dist'] },
+  {
+    ...unocss
+  },
+  { ignores: ['dist', 'src/shims.d.ts'] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommendedTypeChecked],
     files: ['**/*.{ts,tsx}'],
@@ -31,7 +35,8 @@ export default tseslint.config(
       ...react.configs.recommended.rules,
       ...react.configs['jsx-runtime'].rules,
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-      'react-compiler/react-compiler': 'error'
+      'react-compiler/react-compiler': 'error',
+      'react/no-unknown-property': 'off'
     }
   }
 )

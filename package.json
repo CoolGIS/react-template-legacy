@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.60.5",
+    "@unocss/reset": "^0.64.1",
     "jotai": "^2.10.2",
     "ky": "^1.7.2",
     "react": "^18.3.1",
@@ -26,6 +27,7 @@
     "@tanstack/react-query-devtools": "^5.60.5",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "@unocss/eslint-config": "^0.64.1",
     "@vitejs/plugin-legacy": "^5.4.3",
     "@vitejs/plugin-react": "^4.3.3",
     "babel-plugin-react-compiler": "^19.0.0-beta-0dec889-20241115",
@@ -39,10 +41,10 @@
     "postcss-preset-env": "^10.1.1",
     "postcss-pxtorem": "^6.1.0",
     "prettier": "3.3.3",
-    "tailwindcss": "^3.4.15",
     "terser": "^5.36.0",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.14.0",
+    "unocss": "^0.64.1",
     "vite": "^5.4.11",
     "vite-bundle-analyzer": "^0.13.1"
   }

@@ -5,9 +5,9 @@ export function Counter() {
   const [count, setCount] = useAtom(countAtom)
 
   return (
-    <div className="flex justify-center items-center h-[30vh]">
+    <div className="h-30vh flex items-center justify-center">
       <button
-        className="w-32 h-10 bg-blue-500 rounded-full text-white"
+        className="h-10 w-32 rounded-full bg-blue-500 text-white"
         onClick={() => setCount((count) => count + 1)}
       >
         count is: {count}
