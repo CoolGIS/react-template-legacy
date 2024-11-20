@@ -11,7 +11,7 @@ function App() {
       <DevTools />
       <QueryClientProvider client={queryClient}>
         <Counter />
-        <ul className="m-2.5 flex items-center justify-center gap-2.5 border border-gray-300 rounded-md bg-white p-2.5">
+        <ul className="m-2.5 center gap-2.5 border border-gray-300 rounded-md bg-white p-2.5">
           <li>
             <Link to="/home">主页</Link>
           </li>

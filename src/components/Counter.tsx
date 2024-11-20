@@ -5,7 +5,7 @@ export function Counter() {
   const [count, setCount] = useAtom(countAtom)
 
   return (
-    <div className="h-30vh flex items-center justify-center">
+    <div className="h-30vh center">
       <button
         className="h-10 w-32 rounded-full bg-blue-500 text-white"
         onClick={() => setCount((count) => count + 1)}
