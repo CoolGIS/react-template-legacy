@@ -2,13 +2,22 @@ import {
   defineConfig,
   presetUno,
   presetAttributify,
+  presetIcons,
   transformerDirectives,
   transformerAttributifyJsx,
   transformerVariantGroup
 } from 'unocss'
 
 export default defineConfig({
-  presets: [presetUno(), presetAttributify()],
+  presets: [
+    presetUno(),
+    presetAttributify(),
+    presetIcons({
+      collections: {
+        gis: () => import('@iconify-json/gis/icons.json').then((i) => i.default)
+      }
+    })
+  ],
   transformers: [transformerDirectives(), transformerAttributifyJsx(), transformerVariantGroup()],
   shortcuts: [
     {
